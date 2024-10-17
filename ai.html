@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Skin Consultation</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- AI Consultation Section -->
+    <section
+      class="ai-consultation d-flex align-items-center justify-content-center"
+    >
+      <div class="container text-center">
+        <h1>Generate your Skin Routine</h1>
+        <div class="input-group mb-3 mt-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your message here"
+            id="userInput"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            onclick="generateRoutine()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS for AI Integration -->
+    <script>
+      function generateRoutine() {
+        const userInput = document.getElementById('userInput').value;
+
+        // Placeholder for AI prompt logic (replace with your GROQ AI integration)
+        alert('User input submitted: ' + userInput);
+
+        // TODO: Send the userInput to your backend that connects to GROQ AI API
+      }
+    </script>
+
+    <!-- Optional JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
