@@ -30,8 +30,11 @@ app.post('/generate-routine', async (req, res) => {
     // Call the Groq SDK to generate a chat completion
     const chatCompletion = await getGroqChatCompletion(aiPrompt);
 
+    // Format the response to resemble a chat message
+    const formattedResponse = formatChatResponse(chatCompletion);
+
     // Send the AI-generated response back to the frontend
-    res.json({ result: chatCompletion });
+    res.json({ result: formattedResponse });
   } catch (error) {
     console.error('Error with Groq AI:', error);
     res.status(500).json({ error: 'Error generating routine' });
@@ -57,6 +60,17 @@ async function getGroqChatCompletion(userPrompt) {
     console.error('Error fetching completion from Groq AI:', error);
     throw new Error('Groq AI request failed');
   }
+}
+
+// Function to format the Groq response for chat-like UI
+function formatChatResponse(response) {
+  // Split long paragraphs into separate lines for easier reading
+  const formatted = response
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line)
+    .join('<br>');
+  return formatted;
 }
 
 app.listen(port, () => {

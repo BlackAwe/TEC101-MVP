@@ -70,3 +70,34 @@ h1 {
   border: none;
   padding-left: 0;
 }
+
+/* Custom Styling for Chat Bubbles */
+#chat-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+.chat-bubble {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+.user-message {
+  background-color: #007bff;
+  color: white;
+  margin-left: auto;
+  text-align: left;
+}
+.groq-response {
+  background-color: #e9ecef;
+  text-align: left;
+}
+/* Spinner */
+#loading-spinner {
+  display: none;
+}

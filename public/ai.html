@@ -9,12 +9,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      /* Custom Styling */
-    </style>
   </head>
   <body>
-    <!-- AI Consultation Section -->
     <section
       class="ai-consultation d-flex align-items-center justify-content-center"
     >
@@ -45,7 +41,7 @@
           </select>
         </div>
 
-        <!-- User Input and Submit Button -->
+        <!-- User Input -->
         <div class="input-group mb-4">
           <input
             type="text"
@@ -62,10 +58,15 @@
           </button>
         </div>
 
-        <a href="index.html" class="btn btn-outline-primary">Go back</a>
+        <!-- Chat Container for User and AI Messages -->
+        <div id="chat-container"></div>
 
-        <!-- Result Section -->
-        <div id="result" class="mt-4"></div>
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="mt-4">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
       </div>
     </section>
 
